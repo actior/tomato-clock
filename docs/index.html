@@ -1,29 +1,217 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + TS</title>
-    <script type="module" crossorigin src="./assets/index-dvST_Tpl.js"></script>
-    <link rel="stylesheet" crossorigin href="./assets/index-s-MxoWxy.css">
-  </head>
-  <body>
-    <div id="app">
-      <a href="https://vitejs.dev" target="_blank">
-        <img src="vite.svg" class="logo" alt="Vite logo" />
-      </a>
-      <span id="hearts"></span>
-      <a href="https://www.typescriptlang.org/" target="_blank">
-        <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20aria-hidden='true'%20role='img'%20class='iconify%20iconify--logos'%20width='32'%20height='32'%20preserveAspectRatio='xMidYMid%20meet'%20viewBox='0%200%20256%20256'%3e%3cpath%20fill='%23007ACC'%20d='M0%20128v128h256V0H0z'%3e%3c/path%3e%3cpath%20fill='%23FFF'%20d='m56.612%20128.85l-.081%2010.483h33.32v94.68h23.568v-94.68h33.321v-10.28c0-5.69-.122-10.444-.284-10.566c-.122-.162-20.4-.244-44.983-.203l-44.74.122l-.121%2010.443Zm149.955-10.742c6.501%201.625%2011.459%204.51%2016.01%209.224c2.357%202.52%205.851%207.111%206.136%208.208c.08.325-11.053%207.802-17.798%2011.988c-.244.162-1.22-.894-2.317-2.52c-3.291-4.795-6.745-6.867-12.028-7.233c-7.76-.528-12.759%203.535-12.718%2010.321c0%201.992.284%203.17%201.097%204.795c1.707%203.536%204.876%205.649%2014.832%209.956c18.326%207.883%2026.168%2013.084%2031.045%2020.48c5.445%208.249%206.664%2021.415%202.966%2031.208c-4.063%2010.646-14.14%2017.879-28.323%2020.276c-4.388.772-14.79.65-19.504-.203c-10.28-1.828-20.033-6.908-26.047-13.572c-2.357-2.6-6.949-9.387-6.664-9.874c.122-.163%201.178-.813%202.356-1.504c1.138-.65%205.446-3.129%209.509-5.485l7.355-4.267l1.544%202.276c2.154%203.29%206.867%207.801%209.712%209.305c8.167%204.307%2019.383%203.698%2024.909-1.26c2.357-2.153%203.332-4.388%203.332-7.68c0-2.966-.366-4.266-1.91-6.501c-1.99-2.845-6.054-5.242-17.595-10.24c-13.206-5.69-18.895-9.224-24.096-14.832c-3.007-3.25-5.852-8.452-7.03-12.8c-.975-3.617-1.22-12.678-.447-16.335c2.723-12.76%2012.353-21.659%2026.25-24.3c4.51-.853%2014.994-.528%2019.424.569Z'%3e%3c/path%3e%3c/svg%3e" class="logo vanilla" alt="TypeScript logo" />
-      </a>
-      <h1>Vite + TypeScript</h1>
-      <div class="card">
-        <button id="counter" type="button"></button>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vite + TS</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    input[type="text"] {
+      padding-block: 0px;
+      padding-inline: 0px;
+      padding-inline-start: .9375rem;
+    }
+
+
+    .finger {
+      cursor: pointer;
+    }
+
+    .tomato-icon {
+      width: 5rem;
+      height: 5rem;
+    }
+
+    .tomato-icon-big {
+      width: 18.75rem;
+      height: 18.75rem;
+    }
+
+    .white {
+      color: white;
+    }
+
+    .tomato-clock-init-text {
+      font: normal normal normal 14px/20px Lato;
+      letter-spacing: 1.4px;
+      color: #333333;
+    }
+
+    .marginTop-50 {
+      margin-top: 3.125rem;
+    }
+
+    /* 番茄钟第一层 */
+    .tomato-clock-container {
+      display: flex;
+      /* justify-content: center; */
+      width: 100vw;
+      height: 100vh;
+    }
+
+    /* 番茄钟第二层 */
+    .tomato-clock-interface {
+      background: #EAEAEA 0% 0% no-repeat padding-box;
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
+
+    .tomato-clock-operation {
+      display: flex;
+      flex: 1;
+    }
+
+    /* 番茄钟第三层 */
+    /* 左边 */
+    .tomato-clock-init {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .tomato-clock-init-logo {
+      position: relative;
+    }
+
+    .tomato-clock-logo-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #FCFCFC;
+      letter-spacing: 3.6px;
+      font: normal normal 300 24px/29px Lato;
+    }
+
+    .tomato-clock-interface-footer-text {
+      font: normal normal 300 10px/12px Lato;
+      letter-spacing: 1.5px;
+      color: #333333;
+      position: absolute;
+      bottom: 3.3125rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    /* 右边 */
+    .operation-bar {
+      flex-basis: 5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: #333333 0% 0% no-repeat padding-box;
+      border-right: 2px solid #414141;
+    }
+
+    .operation-bar-content {
+      background: #333333 0% 0% no-repeat padding-box;
+      flex: 1;
+      padding-left: 2.1875rem;
+      padding-top: 1.875rem;
+      padding-right: 2.1875rem;
+      color: #FCFCFC;
+    }
+
+    .operation-bar-content-title {
+      font: normal normal 900 20px/24px Lato;
+      letter-spacing: 2px;
+      padding-bottom: 1.625rem;
+      border-bottom: 1px solid #414141;
+      margin-bottom: 1.625rem;
+    }
+
+    .operation-body-title {
+      font: normal normal bold 14px/17px Lato;
+      letter-spacing: 0.7px;
+      color: #ACACAC;
+      margin-bottom: .625rem;
+    }
+
+    .operation-body-input {
+      width: calc(100% - .9375rem);
+      height: 3.125rem;
+      border-radius: .3125rem;
+      border: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <div class="tomato-clock-container">
+      <div class="tomato-clock-interface">
+        <div class="tomato-clock-init">
+          <div class="tomato-clock-init-logo finger">
+            <img src="data:image/svg+xml,%3csvg%20xmlns='http://www.w3.org/2000/svg'%20width='25'%20height='25'%20viewBox='0%200%2025%2025'%3e%3cg%20id='グループ_177'%20data-name='グループ%20177'%20transform='translate(-1321%20-953)'%3e%3ccircle%20id='楕円形_14'%20data-name='楕円形%2014'%20cx='12.5'%20cy='12.5'%20r='12.5'%20transform='translate(1321%20953)'%20fill='%23ea5548'/%3e%3crect%20id='長方形_27'%20data-name='長方形%2027'%20width='4.688'%20height='6.25'%20rx='2.344'%20transform='translate(1342.629%20953)%20rotate(45)'%20fill='%23316901'/%3e%3c/g%3e%3c/svg%3e" class="tomato-icon-big" />
+            <span class="tomato-clock-logo-text">PODOMORO</span>
+          </div>
+          <span class="tomato-clock-init-text marginTop-50">You don’t have any task now, </span>
+          <span class="tomato-clock-init-text">please add task first!</span>
+        </div>
+        <div class="tomato-clock-interface-footer">
+          <span class="tomato-clock-interface-footer-text">PODOMORO</span>
+        </div>
       </div>
-      <p class="read-the-docs">
-        Click on the Vite and TypeScript logos to learn more
-      </p>
+      <div class="tomato-clock-operation">
+        <div class="operation-bar">
+          <div class="operation-bar-icon">
+            <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2023.0.4,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version='1.1'%20id='レイヤー_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20x='0px'%20y='0px'%20viewBox='0%200%2080%2080'%20style='enable-background:new%200%200%2080%2080;'%20xml:space='preserve'%3e%3cstyle%20type='text/css'%3e%20.st0{fill:none;}%20.st1{fill:%23FCFCFC;}%20%3c/style%3e%3cg%20id='グループ_187'%20transform='translate(-1120)'%3e%3crect%20id='長方形_24'%20x='1120'%20y='0'%20class='st0'%20width='80'%20height='80'/%3e%3cg%20id='グループ_25'%3e%3cg%20id='楕円形_16'%20transform='translate(1148%2028)'%3e%3ccircle%20class='st0'%20cx='12.5'%20cy='12.5'%20r='12.5'/%3e%3cpath%20class='st1'%20d='M12.5,25C5.6,25,0,19.4,0,12.5C0,5.6,5.6,0,12.5,0S25,5.6,25,12.5C25,19.4,19.4,25,12.5,25z%20M12.5,3%20C7.3,3,3,7.3,3,12.5c0,5.2,4.3,9.5,9.5,9.5s9.5-4.3,9.5-9.5C22,7.3,17.7,3,12.5,3z'/%3e%3c/g%3e%3cpath%20class='st1'%20d='M1164.5,39h-2.5v-2.5c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5V39h-2.5c-0.8,0-1.5,0.7-1.5,1.5%20s0.7,1.5,1.5,1.5h2.5v2.5c0,0.8,0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5V42h2.5c0.8,0,1.5-0.7,1.5-1.5S1165.3,39,1164.5,39z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e" class="white tomato-icon finger" />
+          </div>
+          <div class="operation-bar-icon">
+            <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2023.0.4,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version='1.1'%20id='レイヤー_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20x='0px'%20y='0px'%20viewBox='0%200%2080%2080'%20style='enable-background:new%200%200%2080%2080;'%20xml:space='preserve'%3e%3cstyle%20type='text/css'%3e%20.st0{fill:none;}%20.st1{fill:%23FCFCFC;}%20%3c/style%3e%3cg%20id='グループ_182'%20transform='translate(-33%20-8501)'%3e%3crect%20id='長方形_25'%20x='33'%20y='8501'%20class='st0'%20width='80'%20height='80'/%3e%3cg%3e%3cpath%20class='st1'%20d='M64.5,8536h18c0.8,0,1.5-0.7,1.5-1.5s-0.7-1.5-1.5-1.5h-18c-0.8,0-1.5,0.7-1.5,1.5S63.7,8536,64.5,8536z'/%3e%3cpath%20class='st1'%20d='M82.5,8541h-18c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5h18c0.8,0,1.5-0.7,1.5-1.5S83.3,8541,82.5,8541z'/%3e%3cpath%20class='st1'%20d='M82.5,8549h-18c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5h18c0.8,0,1.5-0.7,1.5-1.5S83.3,8549,82.5,8549z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e" class="white tomato-icon finger" />
+          </div>
+          <div class="operation-bar-icon">
+            <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2023.0.4,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version='1.1'%20id='レイヤー_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20x='0px'%20y='0px'%20viewBox='0%200%2080%2080'%20style='enable-background:new%200%200%2080%2080;'%20xml:space='preserve'%3e%3cstyle%20type='text/css'%3e%20.st0{fill:none;}%20.st1{fill:%23FCFCFC;}%20%3c/style%3e%3cg%20id='グループ_181'%20transform='translate(-33%20-8581)'%3e%3crect%20id='長方形_26'%20x='33'%20y='8581'%20class='st0'%20width='80'%20height='80'/%3e%3cg%3e%3cpath%20class='st1'%20d='M64.5,8626c0.8,0,1.5-0.7,1.5-1.5v-6c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5v6%20C63,8625.3,63.7,8626,64.5,8626z'/%3e%3cpath%20class='st1'%20d='M76.5,8626c0.8,0,1.5-0.7,1.5-1.5v-5c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5v5%20C75,8625.3,75.7,8626,76.5,8626z'/%3e%3cpath%20class='st1'%20d='M70.5,8626c0.8,0,1.5-0.7,1.5-1.5v-9c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5v9%20C69,8625.3,69.7,8626,70.5,8626z'/%3e%3cpath%20class='st1'%20d='M82.5,8611c-0.8,0-1.5,0.7-1.5,1.5v12c0,0.8,0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5v-12%20C84,8611.7,83.3,8611,82.5,8611z'/%3e%3cpath%20class='st1'%20d='M82.5,8629h-18c-0.8,0-1.5,0.7-1.5,1.5s0.7,1.5,1.5,1.5h18c0.8,0,1.5-0.7,1.5-1.5S83.3,8629,82.5,8629z'/%3e%3c/g%3e%3c/g%3e%3c/svg%3e" class="white tomato-icon finger" />
+          </div>
+          <div class="operation-bar-icon">
+            <img src="data:image/svg+xml,%3c?xml%20version='1.0'%20encoding='utf-8'?%3e%3c!--%20Generator:%20Adobe%20Illustrator%2023.0.4,%20SVG%20Export%20Plug-In%20.%20SVG%20Version:%206.00%20Build%200)%20--%3e%3csvg%20version='1.1'%20id='レイヤー_1'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20x='0px'%20y='0px'%20viewBox='0%200%2080%2080'%20style='enable-background:new%200%200%2080%2080;'%20xml:space='preserve'%3e%3cstyle%20type='text/css'%3e%20.st0{fill:none;}%20.st1{fill:%23FCFCFC;}%20%3c/style%3e%3cg%20id='グループ_180'%20transform='translate(-33%20-8661)'%3e%3crect%20id='長方形_37'%20x='33'%20y='8661'%20class='st0'%20width='80'%20height='80'/%3e%3cpath%20class='st1'%20d='M80.3,8692.4l-5-0.4c0,0,0,0,0,0c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1,0c0,0-0.1,0-0.1,0c-0.1,0-0.1,0-0.2,0%20c0,0-0.1,0-0.1,0c-0.1,0-0.1,0-0.2,0.1c0,0,0,0-0.1,0c-0.1,0-0.1,0.1-0.2,0.1c0,0,0,0-0.1,0.1c0,0-0.1,0.1-0.1,0.1%20c0,0,0,0.1-0.1,0.1c0,0-0.1,0.1-0.1,0.2c0,0,0,0.1-0.1,0.1c0,0.1,0,0.1-0.1,0.2c0,0,0,0.1,0,0.1c0,0.1,0,0.1,0,0.2c0,0,0,0.1,0,0.1%20c0,0,0,0,0,0.1c0,0,0,0,0,0.1v6.9c-1.3-0.6-2.8-0.8-4.2-0.3c-3,0.7-4.9,3.7-4.3,6.7c0.4,1.4,1.4,2.6,2.7,3.2%20c0.8,0.4,1.7,0.6,2.7,0.6c0.6,0,1.1-0.1,1.7-0.2c2.6-0.6,4.4-2.9,4.4-5.5c0-0.1,0-0.2,0-0.4v-9.4l3.4,0.3c0.8,0.1,1.6-0.5,1.6-1.4%20C81.8,8693.2,81.1,8692.5,80.3,8692.4z%20M71.5,8707.5c-0.7,0.2-1.5,0.1-2.2-0.2c-0.6-0.3-1-0.7-1.2-1.3c-0.2-1.4,0.8-2.8,2.2-3h0%20c1.4-0.5,2.9,0.2,3.4,1.5C73.9,8705.9,72.9,8707.2,71.5,8707.5z'/%3e%3c/g%3e%3c/svg%3e" class="white tomato-icon finger" />
+          </div>
+        </div>
+        <div class="operation-bar-content">
+          <div class="operation-bar-content-page">
+            <div class="operation-bar-content-title">
+              ADD NEW TASK
+            </div>
+            <div class="operation-bar-content-body">
+              <div class="operation-add-task">
+                <div class="operation-add-task-input">
+                  <div class="operation-body-title">
+                    TASK TITLE
+                  </div>
+                  <input type="text" placeholder="Add new task" class="operation-body-input" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </body>
+  </div>
+  <!-- <script type="module" src="/src/main.ts"></script> -->
+  <script>
+    // const nameInput = document.querySelector("input");
+    // nameInput.addEventListener("focus", () => {
+    //   nameInput.setCustomValidity("");
+    //   nameInput.checkValidity();
+    //   console.log('first')
+    // });
+    // nameInput.addEventListener("invalid", () => {
+    //   console.log('13131')
+    //   if (nameInput.value === "") {
+    //     nameInput.setCustomValidity("请输入");
+    //   }
+    // });
+  </script>
+</body>
+
 </html>
