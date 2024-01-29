@@ -18,12 +18,11 @@
       padding-inline-start: .9375rem;
     }
 
-
     .finger {
       cursor: pointer;
     }
 
-    .tomato-icon {
+    .icon {
       width: 5rem;
       height: 5rem;
     }
@@ -47,6 +46,22 @@
       margin-top: 3.125rem;
     }
 
+    .tomato-rate-input {
+      display: none;
+    }
+
+    .tomato-rate-list {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .tomato-rate-icon {
+      width: 1.5625rem;
+      height: 1.5625rem;
+      cursor: pointer;
+      background-image: url("/src/static/icons/tomato_small_gray.svg");
+    }
+
     /* 番茄钟第一层 */
     .tomato-clock-container {
       display: flex;
@@ -58,7 +73,7 @@
     /* 番茄钟第二层 */
     .tomato-clock-interface {
       background: #EAEAEA 0% 0% no-repeat padding-box;
-      flex: 1;
+      flex: 2;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -127,7 +142,6 @@
       letter-spacing: 2px;
       padding-bottom: 1.625rem;
       border-bottom: 1px solid #414141;
-      margin-bottom: 1.625rem;
     }
 
     .operation-body-title {
@@ -135,6 +149,7 @@
       letter-spacing: 0.7px;
       color: #ACACAC;
       margin-bottom: .625rem;
+      margin-top: 1.625rem;
     }
 
     .operation-body-input {
@@ -142,6 +157,19 @@
       height: 3.125rem;
       border-radius: .3125rem;
       border: 0px;
+    }
+
+    .task-button {
+      width: 100%;
+      height: 3.125rem;
+      font: normal normal 900 14px/17px Lato;
+      letter-spacing: 1.4px;
+      color: #FCFCFC;
+      background: #EA5548 0% 0% no-repeat padding-box;
+      border-radius: 1.875rem;
+      border-width: 0rem;
+      cursor: pointer;
+      margin-top: 3.125rem;
     }
   </style>
 </head>
@@ -165,24 +193,27 @@
       <div class="tomato-clock-operation">
         <div class="operation-bar">
           <div class="operation-bar-icon">
-            <img src="/src/static/icons/add_white.svg" class="white tomato-icon finger" />
+            <img src="/src/static/icons/add_white.svg" class="white icon finger" />
           </div>
           <div class="operation-bar-icon">
-            <img src="/src/static/icons/list_white.svg" class="white tomato-icon finger" />
+            <img src="/src/static/icons/list_white.svg" class="white icon finger" />
           </div>
           <div class="operation-bar-icon">
-            <img src="/src/static/icons/analysis_white.svg" class="white tomato-icon finger" />
+            <img src="/src/static/icons/analysis_white.svg" class="white icon finger" />
           </div>
           <div class="operation-bar-icon">
-            <img src="/src/static/icons/ringtone_white.svg" class="white tomato-icon finger" />
+            <img src="/src/static/icons/ringtone_white.svg" class="white icon finger" />
           </div>
         </div>
         <div class="operation-bar-content">
           <div class="operation-bar-content-page">
             <div class="operation-bar-content-title">
-              ADD NEW TASK
+              <!-- ADD NEW TASK -->
+              <!-- TASK LISTS -->
+              <!-- ANALYTICS REPORT -->
+              RING TONE
             </div>
-            <div class="operation-bar-content-body">
+            <div class="operation-bar-content-body" style="display: none;">
               <div class="operation-add-task">
                 <div class="operation-add-task-input">
                   <div class="operation-body-title">
@@ -190,7 +221,30 @@
                   </div>
                   <input type="text" placeholder="Add new task" class="operation-body-input" />
                 </div>
+                <div class="operation-add-task-estimated">
+                  <div class="operation-body-title">
+                    ESTIMATED TOMOTO
+                  </div>
+                  <div class="tomato-rate-list">
+                    <div class="tomato-rate-icon"></div>
+                    <div class="tomato-rate-icon"></div>
+                    <div class="tomato-rate-icon"></div>
+                    <div class="tomato-rate-icon"></div>
+                    <div class="tomato-rate-icon"></div>
+                    <div class="tomato-rate-icon"></div>
+                    <div class="tomato-rate-icon"></div>
+                    <div class="tomato-rate-icon"></div>
+                    <div class="tomato-rate-icon"></div>
+                    <div class="tomato-rate-icon"></div>
+                  </div>
+                  <div>
+                    <button class="task-button">ADD TASK</button>
+                  </div>
+                </div>
               </div>
+            </div>
+            <div class="operation-bar-content-body">
+              1231
             </div>
           </div>
         </div>
