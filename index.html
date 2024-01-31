@@ -6,172 +6,6 @@
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Vite + TS</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-    }
-
-    input[type="text"] {
-      padding-block: 0px;
-      padding-inline: 0px;
-      padding-inline-start: .9375rem;
-    }
-
-    .finger {
-      cursor: pointer;
-    }
-
-    .icon {
-      width: 5rem;
-      height: 5rem;
-    }
-
-    .tomato-icon-big {
-      width: 18.75rem;
-      height: 18.75rem;
-    }
-
-    .white {
-      color: white;
-    }
-
-    .tomato-clock-init-text {
-      font: normal normal normal 14px/20px Lato;
-      letter-spacing: 1.4px;
-      color: #333333;
-    }
-
-    .marginTop-50 {
-      margin-top: 3.125rem;
-    }
-
-    .tomato-rate-input {
-      display: none;
-    }
-
-    .tomato-rate-list {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .tomato-rate-icon {
-      width: 1.5625rem;
-      height: 1.5625rem;
-      cursor: pointer;
-      background-image: url("/src/static/icons/tomato_small_gray.svg");
-    }
-
-    /* 番茄钟第一层 */
-    .tomato-clock-container {
-      display: flex;
-      /* justify-content: center; */
-      width: 100vw;
-      height: 100vh;
-    }
-
-    /* 番茄钟第二层 */
-    .tomato-clock-interface {
-      background: #EAEAEA 0% 0% no-repeat padding-box;
-      flex: 2;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
-    }
-
-    .tomato-clock-operation {
-      display: flex;
-      flex: 1;
-    }
-
-    /* 番茄钟第三层 */
-    /* 左边 */
-    .tomato-clock-init {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .tomato-clock-init-logo {
-      position: relative;
-    }
-
-    .tomato-clock-logo-text {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      color: #FCFCFC;
-      letter-spacing: 3.6px;
-      font: normal normal 300 24px/29px Lato;
-    }
-
-    .tomato-clock-interface-footer-text {
-      font: normal normal 300 10px/12px Lato;
-      letter-spacing: 1.5px;
-      color: #333333;
-      position: absolute;
-      bottom: 3.3125rem;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-
-    /* 右边 */
-    .operation-bar {
-      flex-basis: 5rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: #333333 0% 0% no-repeat padding-box;
-      border-right: 2px solid #414141;
-    }
-
-    .operation-bar-content {
-      background: #333333 0% 0% no-repeat padding-box;
-      flex: 1;
-      padding-left: 2.1875rem;
-      padding-top: 1.875rem;
-      padding-right: 2.1875rem;
-      color: #FCFCFC;
-    }
-
-    .operation-bar-content-title {
-      font: normal normal 900 20px/24px Lato;
-      letter-spacing: 2px;
-      padding-bottom: 1.625rem;
-      border-bottom: 1px solid #414141;
-    }
-
-    .operation-body-title {
-      font: normal normal bold 14px/17px Lato;
-      letter-spacing: 0.7px;
-      color: #ACACAC;
-      margin-bottom: .625rem;
-      margin-top: 1.625rem;
-    }
-
-    .operation-body-input {
-      width: calc(100% - .9375rem);
-      height: 3.125rem;
-      border-radius: .3125rem;
-      border: 0px;
-    }
-
-    .task-button {
-      width: 100%;
-      height: 3.125rem;
-      font: normal normal 900 14px/17px Lato;
-      letter-spacing: 1.4px;
-      color: #FCFCFC;
-      background: #EA5548 0% 0% no-repeat padding-box;
-      border-radius: 1.875rem;
-      border-width: 0rem;
-      cursor: pointer;
-      margin-top: 3.125rem;
-    }
-  </style>
 </head>
 
 <body>
@@ -192,28 +26,32 @@
       </div>
       <div class="tomato-clock-operation">
         <div class="operation-bar">
-          <div class="operation-bar-icon">
+          <!-- <div class="operation-bar-icon">
             <img src="/src/static/icons/add_white.svg" class="white icon finger" />
+            <img src="/src/static/icons/add_red.svg" class="white icon finger" />
           </div>
           <div class="operation-bar-icon">
             <img src="/src/static/icons/list_white.svg" class="white icon finger" />
+            <img src="/src/static/icons/list_red.svg" class="white icon finger" />
           </div>
           <div class="operation-bar-icon">
             <img src="/src/static/icons/analysis_white.svg" class="white icon finger" />
+            <img src="/src/static/icons/analysis_red.svg" class="white icon finger" />
           </div>
           <div class="operation-bar-icon">
             <img src="/src/static/icons/ringtone_white.svg" class="white icon finger" />
-          </div>
+            <img src="/src/static/icons/ringtone_red.svg" class="white icon finger" />
+          </div> -->
         </div>
         <div class="operation-bar-content">
           <div class="operation-bar-content-page">
             <div class="operation-bar-content-title">
-              <!-- ADD NEW TASK -->
+              ADD NEW TASK
               <!-- TASK LISTS -->
               <!-- ANALYTICS REPORT -->
-              RING TONE
+              <!-- RING TONE -->
             </div>
-            <div class="operation-bar-content-body" style="display: none;">
+            <div class="operation-bar-content-body">
               <div class="operation-add-task">
                 <div class="operation-add-task-input">
                   <div class="operation-body-title">
@@ -226,6 +64,7 @@
                     ESTIMATED TOMOTO
                   </div>
                   <div class="tomato-rate-list">
+                    <!-- <div class="tomato-rate-icon"></div>
                     <div class="tomato-rate-icon"></div>
                     <div class="tomato-rate-icon"></div>
                     <div class="tomato-rate-icon"></div>
@@ -234,8 +73,7 @@
                     <div class="tomato-rate-icon"></div>
                     <div class="tomato-rate-icon"></div>
                     <div class="tomato-rate-icon"></div>
-                    <div class="tomato-rate-icon"></div>
-                    <div class="tomato-rate-icon"></div>
+                    <div class="tomato-rate-icon"></div> -->
                   </div>
                   <div>
                     <button class="task-button">ADD TASK</button>
@@ -243,15 +81,17 @@
                 </div>
               </div>
             </div>
-            <div class="operation-bar-content-body">
-              1231
+            <div class="operation-bar-content-body" style="display: none;">
+              <div class="operation-music">
+                
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- <script type="module" src="/src/main.ts"></script> -->
+  <script type="module" src="/src/main.ts"></script>
   <script>
     // const nameInput = document.querySelector("input");
     // nameInput.addEventListener("focus", () => {

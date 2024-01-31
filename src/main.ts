@@ -1,7 +1,6 @@
-import './style.css'
-import { setupCounter } from './counter.ts'
-import { setupHearts }from'./snippets/hearts/index.ts'
+import "./style.css";
+import { setupAddTaskEstimate } from "./components/small-tomato-list/index";
+import { setupOperationBarIcon } from "./components/operation-bar-icon/index";
 
-setupHearts(document.querySelector<HTMLSpanElement>('#hearts')!)
-
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
+setupAddTaskEstimate(document.querySelector(".tomato-rate-list") as HTMLDivElement);
+setupOperationBarIcon(document.querySelector(".operation-bar") as HTMLDivElement);
