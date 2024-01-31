@@ -10,6 +10,10 @@ input[type="text"] {
   padding-inline-start: .9375rem;
 }
 
+.displayBlock {
+  /* display: block; */
+}
+
 .finger {
   cursor: pointer;
 }
@@ -141,6 +145,10 @@ input[type="text"] {
   letter-spacing: 2px;
   padding-bottom: 1.625rem;
   border-bottom: 1px solid #414141;
+}
+
+.operation-bar-content-body {
+  /* display: none; */
 }
 
 .operation-body-title {
