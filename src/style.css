@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   padding: 0;
@@ -7,7 +6,7 @@ body {
 input[type="text"] {
   padding-block: 0px;
   padding-inline: 0px;
-  padding-inline-start: .9375rem;
+  padding-inline-start: 0.9375rem;
 }
 
 .displayBlock {
@@ -36,6 +35,10 @@ input[type="text"] {
   font: normal normal normal 14px/20px Lato;
   letter-spacing: 1.4px;
   color: #333333;
+}
+
+.mr10 {
+  margin-right: 0.625rem;
 }
 
 .marginTop-50 {
@@ -75,7 +78,7 @@ input[type="text"] {
 
 /* 番茄钟第二层 */
 .tomato-clock-interface {
-  background: #EAEAEA 0% 0% no-repeat padding-box;
+  background: #eaeaea 0% 0% no-repeat padding-box;
   flex: 2;
   display: flex;
   justify-content: center;
@@ -106,7 +109,7 @@ input[type="text"] {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  color: #FCFCFC;
+  color: #fcfcfc;
   letter-spacing: 3.6px;
   font: normal normal 300 24px/29px Lato;
 }
@@ -119,6 +122,104 @@ input[type="text"] {
   bottom: 3.3125rem;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.tomato-clock-task {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 18.75rem;
+}
+
+.tomato-clock-task-title {
+  text-align: left;
+  font: normal normal bold 24px/29px Lato;
+  letter-spacing: 1.2px;
+  color: #333333;
+  margin-bottom: 0.625rem;
+}
+
+.tomato-clock-task-estimated {
+  display: flex;
+}
+
+.tomato-clock-task-estimated-cirle {
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 2px solid #ea5548;
+  border-radius: 50%;
+}
+
+.tomato-clock-task-estimated-cirle-fill {
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 2px solid #ea5548;
+  background-color: #ea5548;
+  border-radius: 50%;
+}
+
+.tomato-clock-reciprocal-circle {
+  width: 18.75rem;
+  height: 18.75rem;
+  background: #acacac 0% 0% no-repeat padding-box;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3.125rem 0rem;
+}
+
+.tomato-clock-reciprocal-circle-white {
+  width: 12.5rem;
+  height: 12.5rem;
+  background: #fcfcfc 0% 0% no-repeat padding-box;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tomato-clock-reciprocal-circle-countdown {
+  text-align: center;
+  font: normal normal bold 40px/48px Lato;
+  letter-spacing: 4px;
+  color: #333333;
+}
+
+.tomato-clock-task-operation {
+  display: flex;
+  justify-content: space-between;
+  min-width: 18.75rem;
+  margin-bottom: 3.125rem;
+}
+
+.tomato-clock-task-operation-cirle {
+  width: 3.125rem;
+  height: 3.125rem;
+  background: #fcfcfc 0% 0% no-repeat padding-box;
+  border-radius: 50%;
+}
+
+.tomato-clock-task-operation-cirle-icon {
+  width: 1.4375rem;
+  height: 1.4375rem;
+}
+
+.task-complete {
+  width: 1rem;
+  height: 1rem;
+  margin-right: .3125rem;
+}
+
+.tomato-clock-task-complete {
+  text-align: left;
+  font: normal normal bold 14px/17px Lato;
+  letter-spacing: 1.4px;
+  color: #333333;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
 
 /* 右边 */
@@ -137,7 +238,7 @@ input[type="text"] {
   padding-left: 2.1875rem;
   padding-top: 1.875rem;
   padding-right: 2.1875rem;
-  color: #FCFCFC;
+  color: #fcfcfc;
 }
 
 .operation-bar-content-title {
@@ -154,15 +255,15 @@ input[type="text"] {
 .operation-body-title {
   font: normal normal bold 14px/17px Lato;
   letter-spacing: 0.7px;
-  color: #ACACAC;
-  margin-bottom: .625rem;
+  color: #acacac;
+  margin-bottom: 0.625rem;
   margin-top: 1.625rem;
 }
 
 .operation-body-input {
-  width: calc(100% - .9375rem);
+  width: calc(100% - 0.9375rem);
   height: 3.125rem;
-  border-radius: .3125rem;
+  border-radius: 0.3125rem;
   border: 0px;
 }
 
@@ -171,8 +272,8 @@ input[type="text"] {
   height: 3.125rem;
   font: normal normal 900 14px/17px Lato;
   letter-spacing: 1.4px;
-  color: #FCFCFC;
-  background: #EA5548 0% 0% no-repeat padding-box;
+  color: #fcfcfc;
+  background: #ea5548 0% 0% no-repeat padding-box;
   border-radius: 1.875rem;
   border-width: 0rem;
   cursor: pointer;

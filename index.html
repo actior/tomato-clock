@@ -13,13 +13,40 @@
   <div id="app">
     <div class="tomato-clock-container">
       <div class="tomato-clock-interface">
-        <div class="tomato-clock-init">
+        <!-- <div class="tomato-clock-init" style="display: none;">
           <div class="tomato-clock-init-logo finger">
             <img src="/src/static/icons/tomato_small_color.svg" class="tomato-icon-big" />
             <span class="tomato-clock-logo-text">PODOMORO</span>
           </div>
           <span class="tomato-clock-init-text marginTop-50">You don’t have any task now, </span>
           <span class="tomato-clock-init-text">please add task first!</span>
+        </div> -->
+        <div class="tomato-clock-task">
+          <div class="tomato-clock-task-title">
+            My First Task
+          </div>
+          <div class="tomato-clock-task-estimated">
+            <div class="tomato-clock-task-estimated-cirle mr10"></div>
+            <div class="tomato-clock-task-estimated-cirle-fill"></div>
+          </div>
+          <div class="tomato-clock-reciprocal-circle">
+            <div class="tomato-clock-reciprocal-circle-white">
+              <div class="tomato-clock-reciprocal-circle-countdown">
+                25:00
+              </div>
+            </div>
+          </div>
+          <div class="tomato-clock-task-operation">
+            <div class="tomato-clock-task-operation-cirle">
+              <img src="/src/static/icons/play_gray.svg" class="tomato-clock-task-operation-cirle-icon">
+            </div>
+            <div class="tomato-clock-task-operation-cirle"></div>
+            <div class="tomato-clock-task-operation-cirle"></div>
+          </div>
+          <div class="tomato-clock-task-complete">
+            <img src="/src/static/icons/complete.svg" class="task-complete" />
+            TASK COMPLETE
+          </div>
         </div>
         <div class="tomato-clock-interface-footer">
           <span class="tomato-clock-interface-footer-text">PODOMORO</span>
@@ -27,30 +54,11 @@
       </div>
       <div class="tomato-clock-operation">
         <div class="operation-bar">
-          <!-- <div class="operation-bar-icon">
-            <img src="/src/static/icons/add_white.svg" class="white icon finger" />
-            <img src="/src/static/icons/add_red.svg" class="white icon finger" />
-          </div>
-          <div class="operation-bar-icon">
-            <img src="/src/static/icons/list_white.svg" class="white icon finger" />
-            <img src="/src/static/icons/list_red.svg" class="white icon finger" />
-          </div>
-          <div class="operation-bar-icon">
-            <img src="/src/static/icons/analysis_white.svg" class="white icon finger" />
-            <img src="/src/static/icons/analysis_red.svg" class="white icon finger" />
-          </div>
-          <div class="operation-bar-icon">
-            <img src="/src/static/icons/ringtone_white.svg" class="white icon finger" />
-            <img src="/src/static/icons/ringtone_red.svg" class="white icon finger" />
-          </div> -->
         </div>
         <div class="operation-bar-content">
           <div class="operation-bar-content-page">
             <div class="operation-bar-content-title">
               ADD NEW TASK
-              <!-- TASK LISTS -->
-              <!-- ANALYTICS REPORT -->
-              <!-- RING TONE -->
             </div>
             <div class="displayBlock operation-bar-content-body">
               <div class="operation-add-task">
@@ -65,16 +73,6 @@
                     ESTIMATED TOMOTO
                   </div>
                   <div class="tomato-rate-list">
-                    <!-- <div class="tomato-rate-icon"></div>
-                    <div class="tomato-rate-icon"></div>
-                    <div class="tomato-rate-icon"></div>
-                    <div class="tomato-rate-icon"></div>
-                    <div class="tomato-rate-icon"></div>
-                    <div class="tomato-rate-icon"></div>
-                    <div class="tomato-rate-icon"></div>
-                    <div class="tomato-rate-icon"></div>
-                    <div class="tomato-rate-icon"></div>
-                    <div class="tomato-rate-icon"></div> -->
                   </div>
                   <div>
                     <button class="task-button">ADD TASK</button>
