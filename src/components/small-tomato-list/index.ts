@@ -3,7 +3,7 @@ export function setupAddTaskEstimate(element: HTMLDivElement) {
   for (let i = 0; i < 10; i++) {
     const tomatoIcon = document.createElement("div");
     tomatoIcon.className =
-      i === 0 ? "tomato-rate-icon-checked" : "tomato-rate-icon";
+      i === 0 ? "tomato-rate-icon tomato-rate-icon-checked" : "tomato-rate-icon";
     element.appendChild(tomatoIcon);
   }
   const tomatoIconList = document.querySelectorAll(".tomato-rate-icon");
