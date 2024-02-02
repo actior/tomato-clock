@@ -199,17 +199,37 @@ input[type="text"] {
   height: 3.125rem;
   background: #fcfcfc 0% 0% no-repeat padding-box;
   border-radius: 50%;
+  position: relative;
 }
 
 .tomato-clock-task-operation-cirle-icon {
-  width: 1.4375rem;
-  height: 1.4375rem;
+  width: 3.125rem;
+  height: 3.125rem;
+  cursor: pointer;
+}
+
+.tomato-clock-task-operation-cirle-text {
+  display: none;
+  font: normal normal 900 10px/12px Lato;
+  letter-spacing: 0.5px;
+  color: #ea5548;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #FCFCFC 0% 0% no-repeat padding-box;
+}
+
+.tomato-clock-task-operation-cirle-icon:hover
+  + .tomato-clock-task-operation-cirle-text {
+  display: block;
 }
 
 .task-complete {
   width: 1rem;
   height: 1rem;
-  margin-right: .3125rem;
+  margin-right: 0.3125rem;
 }
 
 .tomato-clock-task-complete {
