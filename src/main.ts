@@ -5,7 +5,7 @@ import { CanvasTomato } from "./components/canvas-tomato/index";
 import { setupTaskOperation } from "./components/task-operation/index";
 
 const circleClock = new (CanvasTomato as any)('canvas');
-circleClock.update(1500);
+circleClock.update(10);
 // circleClock.run(1500, () => {
 //   console.log("倒计时执行完毕");
 // });

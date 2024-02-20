@@ -32,7 +32,7 @@ export function setupTaskOperation(element: HTMLDivElement) {
   ) as HTMLDivElement;
   console.log("clockStartBtn: ", clockStartBtn);
   clockStartBtn.addEventListener("click", () => {
-    CanvasTomato.prototype.run(1500, () => {
+    CanvasTomato.prototype.run(10, () => {
       // circleClock.update(180);
       console.log("倒计时执行完毕");
     });
