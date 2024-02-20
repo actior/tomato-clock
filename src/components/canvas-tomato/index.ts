@@ -75,7 +75,7 @@ CanvasTomato.prototype.createLinearGradientByTime = () => {
   return canvasGradient;
 };
 
-//
+// 绘制倒计时文本
 CanvasTomato.prototype.drawTimeText = () => {
   context.fillStyle = CanvasTomato.prototype.createLinearGradientByTime();
   context.textAlign = "center";

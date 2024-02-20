@@ -4,7 +4,7 @@ import { setupOperationBarIcon } from "./components/operation-bar-icon/index";
 import { CanvasTomato } from "./components/canvas-tomato/index";
 
 const circleClock = new (CanvasTomato as any)('canvas');
-circleClock.run(10, () => {
+circleClock.run(1500, () => {
   console.log("倒计时执行完毕");
 });
 
