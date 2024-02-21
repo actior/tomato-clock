@@ -1,7 +1,7 @@
 import { CanvasTomato } from "../canvas-tomato/index";
-import RESET from '../../static/icons/reset_gray.svg'
-import START from '../../static/icons/play_gray.svg'
-import PAUSE from '../../static/icons/pause_gray.svg'
+import RESET from '../../../static/icons/reset_gray.svg'
+import START from '../../../static/icons/play_gray.svg'
+import PAUSE from '../../../static/icons/pause_gray.svg'
 
 const taskIconList = [
   {

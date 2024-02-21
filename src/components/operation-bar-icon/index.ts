@@ -1,11 +1,11 @@
-import TASK from '../../static/icons/add_white.svg'
-import TASKED from '../../static/icons/add_red.svg'
-import LIST from '../../static/icons/list_white.svg'
-import LISTED from '../../static/icons/list_red.svg'
-import ANALYSIS from '../../static/icons/analysis_white.svg'
-import ANALYSISED from '../../static/icons/analysis_red.svg'
-import RING from '../../static/icons/ringtone_white.svg'
-import RINGED from '../../static/icons/ringtone_red.svg'
+import TASK from '../../../static/icons/add_white.svg'
+import TASKED from '../../../static/icons/add_red.svg'
+import LIST from '../../../static/icons/list_white.svg'
+import LISTED from '../../../static/icons/list_red.svg'
+import ANALYSIS from '../../../static/icons/analysis_white.svg'
+import ANALYSISED from '../../../static/icons/analysis_red.svg'
+import RING from '../../../static/icons/ringtone_white.svg'
+import RINGED from '../../../static/icons/ringtone_red.svg'
 
 const centerIconList = [
   {
