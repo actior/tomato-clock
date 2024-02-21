@@ -1,20 +1,23 @@
 import { CanvasTomato } from "../canvas-tomato/index";
+import RESET from '../../static/icons/reset_gray.svg'
+import START from '../../static/icons/play_gray.svg'
+import PAUSE from '../../static/icons/pause_gray.svg'
 
 const taskIconList = [
   {
     className: "tomato-clock-task-operation-cirle clock-start",
     title: "START",
-    icon: "/src/static/icons/play_gray.svg",
+    icon: START,
   },
   {
     className: "tomato-clock-task-operation-cirle clock-pause",
     title: "PAUSE",
-    icon: "/src/static/icons/pause_gray.svg",
+    icon: PAUSE,
   },
   {
     className: "tomato-clock-task-operation-cirle clock-reset",
     title: "RESET",
-    icon: "/src/static/icons/reset_gray.svg",
+    icon: RESET,
   },
 ];
 export function setupTaskOperation(element: HTMLDivElement) {

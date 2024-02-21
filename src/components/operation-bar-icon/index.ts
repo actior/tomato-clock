@@ -1,23 +1,32 @@
+import TASK from '../../static/icons/add_white.svg'
+import TASKED from '../../static/icons/add_red.svg'
+import LIST from '../../static/icons/list_white.svg'
+import LISTED from '../../static/icons/list_red.svg'
+import ANALYSIS from '../../static/icons/analysis_white.svg'
+import ANALYSISED from '../../static/icons/analysis_red.svg'
+import RING from '../../static/icons/ringtone_white.svg'
+import RINGED from '../../static/icons/ringtone_red.svg'
+
 const centerIconList = [
   {
     title: "ADD NEW TASK",
-    icon: "/src/static/icons/add_white.svg",
-    iconEd: "/src/static/icons/add_red.svg",
+    icon: TASK,
+    iconEd: TASKED,
   },
   {
     title: "TASK LISTS",
-    icon: "/src/static/icons/list_white.svg",
-    iconEd: "/src/static/icons/list_red.svg",
+    icon: LIST,
+    iconEd: LISTED,
   },
   {
     title: "ANALYTICS REPORT",
-    icon: "/src/static/icons/analysis_white.svg",
-    iconEd: "/src/static/icons/analysis_red.svg",
+    icon: ANALYSIS,
+    iconEd: ANALYSISED,
   },
   {
     title: "RING TONE",
-    icon: "/src/static/icons/ringtone_white.svg",
-    iconEd: "/src/static/icons/ringtone_red.svg",
+    icon: RING,
+    iconEd: RINGED,
   },
 ];
 
