@@ -1,7 +1,7 @@
 import { CanvasTomato } from "../canvas-tomato/index";
-import RESET from '../../../static/icons/reset_gray.svg'
-import START from '../../../static/icons/play_gray.svg'
-import PAUSE from '../../../static/icons/pause_gray.svg'
+import RESET from "../../../static/icons/reset_gray.svg";
+import START from "../../../static/icons/play_gray.svg";
+import PAUSE from "../../../static/icons/pause_gray.svg";
 
 const taskIconList = [
   {
@@ -33,10 +33,9 @@ export function setupTaskOperation(element: HTMLDivElement) {
   const clockStartBtn = document.querySelector(
     ".clock-start"
   ) as HTMLDivElement;
-  console.log("clockStartBtn: ", clockStartBtn);
   clockStartBtn.addEventListener("click", () => {
-    CanvasTomato.prototype.run(10, () => {
-      // circleClock.update(180);
+    const circleClock = new (CanvasTomato as any)("canvas");
+    circleClock.run(10, () => {
       console.log("倒计时执行完毕");
     });
   });
